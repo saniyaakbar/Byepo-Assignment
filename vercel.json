@@ -1,14 +1,8 @@
 {
-  "version": 2,
-  "buildCommand": "cd backend && npm install && npm run build",
-  "outputDirectory": "backend/dist",
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "/api/index.js"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
