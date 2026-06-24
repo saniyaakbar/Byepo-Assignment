@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+*/node_modules/
+package-lock.json
+*/package-lock.json
+yarn.lock
+*/yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+backend/.env
+admin-app/.env
+superadmin-app/.env
+user-app/.env
+
+# Build outputs
+dist/
+build/
+*/dist/
+*/build/
+out/
+*/out/
+
+# TypeScript
+*.tsbuildinfo
+.tsconfig.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temp files
+*.tmp
+.cache/
+temp/
