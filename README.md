@@ -1,3 +1,12 @@
+<img width="1908" height="725" alt="image" src="https://github.com/user-attachments/assets/e269ca09-a5e9-4b41-8267-95c6edc8ae1d" />
+
+<img width="1422" height="740" alt="image" src="https://github.com/user-attachments/assets/eb6deb5a-53ce-42f2-bf16-03145ec88490" />
+
+<img width="1882" height="831" alt="image" src="https://github.com/user-attachments/assets/2f799ea4-7e2c-46ca-b3e1-af63153a5965" />
+
+<img width="1846" height="860" alt="image" src="https://github.com/user-attachments/assets/1fc6ef4a-8778-4784-9c2a-28fed4336c0d" />
+
+
 # Feature Flag Management System
 
 A **production-ready** full-stack multi-tenant application for managing feature flags with role-based access control, JWT authentication, TypeScript strict mode, and comprehensive security hardening. Built with React 18, Express 4, MongoDB, and Tailwind CSS.
@@ -499,5 +508,6 @@ In a real-world system, users would be authenticated and scoped to their organiz
 - ??? **MongoDB Atlas** - Cloud-based persistence
 - ?? **Responsive UI** - Works on desktop and mobile
 
-#   B y e p o - A s s i g n m e n t  
+#   B y e p o - A s s i g n m e n t 
+ 
  
