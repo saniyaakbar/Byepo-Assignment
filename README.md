@@ -1,5 +1,24 @@
 
 
+
+
+WORKING DEMO: 
+
+Watch the complete desktop workflow demonstrating:
+
+Super Admin login and organization creation
+Admin registration and login
+Feature flag creation and management
+Feature flag enable/disable flow
+End-user feature checking
+
+NOTE: The application is fully responsive and contains dark mode as well. 
+
+Desktop: https://drive.google.com/file/d/10XVsc8ppGVlKmKWxCmSrJaYQPWGhHzR1/view?usp=sharing
+Responsive: https://drive.google.com/file/d/1mHAhCjQWkmj4gZNOE2pdU6TCT3MaWeNs/view?usp=sharing
+
+DATABASE:
+
 <img width="1908" height="725" alt="image" src="https://github.com/user-attachments/assets/e269ca09-a5e9-4b41-8267-95c6edc8ae1d" />
 
 <img width="1422" height="740" alt="image" src="https://github.com/user-attachments/assets/eb6deb5a-53ce-42f2-bf16-03145ec88490" />
