@@ -25,9 +25,27 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     const storedUser = localStorage.getItem('user');
+    
     if (storedToken && storedUser) {
-      setToken(storedToken);
-      setUser(JSON.parse(storedUser));
+      try {
+        const parsed = JSON.parse(storedUser);
+        // Validate user has required fields before casting
+        if (
+          parsed &&
+          typeof parsed === 'object' &&
+          'id' in parsed &&
+          'organizationId' in parsed
+        ) {
+          setToken(storedToken);
+          setUser(parsed as User);
+        } else {
+          // Invalid user structure - clear it
+          localStorage.clear();
+        }
+      } catch {
+        // JSON parse error - clear corrupted storage
+        localStorage.clear();
+      }
     }
   }, []);
 
@@ -70,8 +88,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const logout = useCallback(() => {
     setUser(null);
     setToken(null);
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    localStorage.clear();
   }, []);
 
   const clearError = useCallback(() => {

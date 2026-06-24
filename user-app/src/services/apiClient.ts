@@ -23,17 +23,15 @@ class UserApiClient {
   }
 
   private getErrorMessage(error: unknown): string {
-    if (axios.isAxiosError(error)) {
-      // Check if response data has a message property
-      const data = error.response?.data;
-      if (data && typeof data === 'object' && 'message' in data) {
-        const message = (data as Record<string, unknown>).message;
-        if (typeof message === 'string') {
-          return message;
-        }
+    // Try to extract message from backend error response
+    if (axios.isAxiosError(error) && error.response?.data) {
+      const data = error.response.data as Record<string, unknown>;
+      if (data.message && typeof data.message === 'string' && data.message.trim()) {
+        return data.message;
       }
     }
-    return 'An error occurred';
+    // Return safe generic message
+    return 'Something went wrong';
   }
 
   async checkFeatureFlag(organizationId: string, featureKey: string): Promise<CheckFlagResponse> {
