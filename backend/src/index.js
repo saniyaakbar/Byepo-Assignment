@@ -33,10 +33,15 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-// Routes
-app.use('/api/org', orgRoutes);
-app.use('/api/auth', authRoutes);
-app.use('/api/feature', featureFlagRoutes);
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ message: 'Feature Flags API', version: '1.0.0', status: 'running' });
+});
+
+// Routes (NO /api prefix - Vercel handles /api routing)
+app.use('/org', orgRoutes);
+app.use('/auth', authRoutes);
+app.use('/feature', featureFlagRoutes);
 
 // 404 handler
 app.use((req, res) => {
